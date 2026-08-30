@@ -16,10 +16,13 @@ app.listen(PORT, () => {
     console.log(`server running on ${PORT}`);
     connectDB();
 });
+import dns from "dns";
+
+dns.setServers(['8.8.8.8','8.8.4.4'])
 
 const connectDB = async() => {
     try {
-        await mongoose.connect(process.env.MONGODB_URI);
+        await mongoose.connect("mongodb://127.0.0.1:27017/gpt_db");
         console.log("Connected with Database!");
     } catch(err) {
         console.log("Failed to connect with Db", err);
