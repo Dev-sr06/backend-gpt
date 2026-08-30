@@ -58,6 +58,6 @@ app.post("/test", async (req, res) => {
 
 app.get("/test",(req,res)=>{
     res.json({
-        msg:"test successfully :updated test again successfully"
+        msg:"test successfully :updated test again successfully sumanyu new_test"
     })
 })
