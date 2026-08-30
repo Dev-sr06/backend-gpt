@@ -56,3 +56,8 @@ const connectDB = async() => {
 //     }
 // });
 
+app.get("/test",(req,res)=>{
+    res.json({
+        msg:"test successfull"
+    })
+})
